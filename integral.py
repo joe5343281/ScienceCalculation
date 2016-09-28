@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-def interal(f, a, b):
+def integral(f, a, b):
     sum = 0.0
     dx = 0.001
     while(a < (b - 0.001)): 
