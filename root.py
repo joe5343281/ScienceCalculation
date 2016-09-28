@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 
-from sympy import limit
-from sympy import Symbol
-
 def EvalSlope(func,x):
     dx = 0.000001
     dy = func(x + dx) - func(x)
