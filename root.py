@@ -8,7 +8,7 @@ def EvalSlope(func,x):
 
 def NewtonMethond(func, x):
     slope = EvalSlope(func, x)
-    xn = x - (func(x)/slope)
+    xn = x - (func(x)/slope)    # slope:f'(x)
     
     if((func(xn) > 0.5) or (func(xn) < -0.5)):
         return NewtonMethond(func, xn)
