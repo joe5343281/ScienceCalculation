@@ -6,19 +6,16 @@ def EvalSlope(func,x):
     
     return dy/dx
 
-def NewtonMethond(func, x):
+def Newton(func, x):
     slope = EvalSlope(func, x)
     xn = x - (func(x)/slope)    # slope:f'(x)
-    
-    if(abs(func(xn) > 0.5)):
-        return NewtonMethond(func, xn)
-    else:
-        return xn
+
+    return Newton(func, xn) if func(xn) > 0.5 else xn
     
 def f(x):
     return ((x**14) - 1234567890123456)
     
 def main():
-    print(NewtonMethond(f, 100))
+    print(Newton(f, 100))
 
-main() 
+main()
