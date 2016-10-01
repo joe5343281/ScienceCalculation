@@ -7,9 +7,9 @@ def EvalSlope(func,x):
     return dy/dx
 
 def Newton(func, x):
-    slope = EvalSlope(func, x)
-    xn = x - (func(x)/slope)    # slope:f'(x)
-
+    derivate = EvalSlope(func, x)
+    xn = x - (func(x)/derivate)
+    
     return Newton(func, xn) if func(xn) > 0.5 else xn
     
 def f(x):
